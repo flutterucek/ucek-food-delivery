@@ -8,8 +8,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  bool isTapped = false;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,41 +16,11 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           children: <Widget>[
             UcekAppBar(),
-            SizedBox(
-              height: 12,
-            ),
-            GestureDetector(
-              onTap: () {
-                setState(() {
-                  isTapped = !isTapped;
-                });
-              },
-              child: Container(
-                height: 100,
-                width: 100,
-                color: isTapped ? Colors.blue : Colors.white,
-              ),
-            ),
+            CategoryList(),
             Text(
               'Popular Dishes',
               style: TextStyle(color: Colors.white70, fontSize: 20),
             ),
-            CategoryList(),
-//            Container(
-//              height: 120,
-//              child: ListView.builder(
-//                scrollDirection: Axis.horizontal,
-//                  itemCount: categoryList.length,
-//                  itemBuilder: (context, index) {
-//                    return Container(
-//                      margin: EdgeInsets.only(right: 12),
-////                      height: 80,
-//                      width: 60,
-//                      color: Colors.white,
-//                      child: Text(categoryList[index]),
-//                    );
-//                  }),
-//            )
           ],
         ),
       ),
@@ -60,10 +28,13 @@ class _HomePageState extends State<HomePage> {
         data: Theme.of(context).copyWith(
           // sets the background color of the `BottomNavigationBar`
             canvasColor: Colors.black,
+            //I tried removing the "title" elements from the BottomNavigationBar items. But it throws some weird error
+            //Anyway, since this works, just finalised with it
+            //Would reduce file size if we could get rid of this though
             textTheme: Theme
                 .of(context)
                 .textTheme
-                .copyWith(caption: new TextStyle(color: Colors.green))), // sets the inactive color of the `BottomNavigationBar`
+                .copyWith(caption: new TextStyle(color: Colors.greenAccent))), // sets the inactive color of the `BottomNavigationBar`
         child: new BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
           currentIndex: 0,
@@ -81,7 +52,7 @@ class _HomePageState extends State<HomePage> {
               title: new Text("Contact"),
             )
           ],
-          selectedItemColor: Colors.green,
+          selectedItemColor: Colors.greenAccent,
           unselectedItemColor: Colors.grey[800],
           showSelectedLabels: false,
           showUnselectedLabels: false,
@@ -89,24 +60,4 @@ class _HomePageState extends State<HomePage> {
       ),
     );
   }
-}
-
-class ProductCardClipper extends CustomClipper<Path> {
-
-  @override
-  Path getClip(Size size) {
-    print(size.height);
-    Path path = Path();
-    path..moveTo(0,size.height/2 - 20)
-    ..lineTo(0, size.height/2 +20)
-    ..lineTo(size.width,40)
-    ..lineTo(size.width, 0)
-    ..lineTo(size.width - 40, 0)
-    ..lineTo(0, size.height/2 - 20);
-
-    return path;
-  }
-
-  @override
-  bool shouldReclip(CustomClipper<Path> oldClipper) => false;
 }
