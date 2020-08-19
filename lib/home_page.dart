@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ucek_food_delivery/ucek_appbar.dart';
+import 'package:ucek_food_delivery/category_list.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -8,12 +9,6 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   bool isTapped = false;
-  List<String> categoryList = [
-    'Indian Food',
-    'Chineese Food',
-    'Italian Food',
-    'Kerala Food'
-  ];
 
   @override
   Widget build(BuildContext context) {
@@ -42,24 +37,7 @@ class _HomePageState extends State<HomePage> {
               'Popular Dishes',
               style: TextStyle(color: Colors.white70, fontSize: 20),
             ),
-            ClipPath(
-
-//              clipper: ProductCardClipper(),
-              child: Container(
-                height: 300,
-                width: 200,
-                decoration: BoxDecoration(
-                  color: Colors.white12,
-                  borderRadius: BorderRadius.circular(30)
-                ),
-                child: Stack(
-                  children: <Widget>[
-
-                  ],
-                ),
-              ),
-            )
-
+            CategoryList(),
 //            Container(
 //              height: 120,
 //              child: ListView.builder(
@@ -76,6 +54,37 @@ class _HomePageState extends State<HomePage> {
 //                  }),
 //            )
           ],
+        ),
+      ),
+      bottomNavigationBar:  new Theme(
+        data: Theme.of(context).copyWith(
+          // sets the background color of the `BottomNavigationBar`
+            canvasColor: Colors.black,
+            textTheme: Theme
+                .of(context)
+                .textTheme
+                .copyWith(caption: new TextStyle(color: Colors.green))), // sets the inactive color of the `BottomNavigationBar`
+        child: new BottomNavigationBar(
+          type: BottomNavigationBarType.fixed,
+          currentIndex: 0,
+          items: [
+            new BottomNavigationBarItem(
+              icon: new Icon(Icons.fastfood, size: 40),
+              title: new Text("Food"),
+            ),
+            new BottomNavigationBarItem(
+              icon: new Icon(Icons.shopping_basket, size: 40),
+              title: new Text("Buy"),
+            ),
+            new BottomNavigationBarItem(
+              icon: new Icon(Icons.headset_mic, size: 40),
+              title: new Text("Contact"),
+            )
+          ],
+          selectedItemColor: Colors.green,
+          unselectedItemColor: Colors.grey[800],
+          showSelectedLabels: false,
+          showUnselectedLabels: false,
         ),
       ),
     );
