@@ -1,5 +1,3 @@
-//This file holds category cards as well as containers for the item cards
-
 import 'package:flutter/material.dart';
 import 'package:ucek_food_delivery/menu.dart';
 
@@ -23,11 +21,11 @@ class _CategoryListState extends State<CategoryList> {
     ];
 
     List<String> URList=[
-      'https://www.archanaskitchen.com/images/archanaskitchen/1-Author/sneha-archanaskitchen.com/Aam_Panna_Pani_Puri_Recipe_.jpg',
-      'https://www.jocooks.com/wp-content/uploads/2020/04/sesame-noodles-1-11.jpg',
-      'https://www.thespruceeats.com/thmb/l4w6PvMqsz1EjueCAh_foPmYafM=/3456x3456/smart/filters:no_upscale()/garlic-burger-patties-333503-hero-01-e4df660ff27b4e5194fdff6d703a4f83.jpg',
-      'https://1.bp.blogspot.com/-bAr7TPvKLs8/XINpM6F844I/AAAAAAAA6s4/FVEgfbgRlVcJOVxnUjWK9tAKcmUYxLVUwCLcBGAs/s1600/ration-rice-idli.jpg',
-      'https://www.acouplecooks.com/wp-content/uploads/2019/09/Pasta-with-Vodka-Sauce-002-735x919.jpg',
+      'images/indian.png',
+      'images/chinese.png',
+      'images/american.png',
+      'images/kerala.png',
+      'images/italian.png'
     ];
 
     return Column(
@@ -62,7 +60,7 @@ class _CategoryListState extends State<CategoryList> {
                               child: Container(
                                 height: 60,
                                 width: 60,
-                                child: Image.network(URList[index], fit:BoxFit.cover),
+                                child: Image.asset(URList[index], fit:BoxFit.cover),
                               ),
                             ),
                           ),

@@ -22,15 +22,11 @@ class _HomePageState extends State<HomePage> {
       ),
       bottomNavigationBar:  new Theme(
         data: Theme.of(context).copyWith(
-          // sets the background color of the `BottomNavigationBar`
             canvasColor: Colors.black,
-            //I tried removing the "title" elements from the BottomNavigationBar items. But it throws some weird error
-            //Anyway, since this works, just finalised with it
-            //Would reduce file size if we could get rid of this though
             textTheme: Theme
                 .of(context)
                 .textTheme
-                .copyWith(caption: new TextStyle(color: Colors.greenAccent))), // sets the inactive color of the `BottomNavigationBar`
+                .copyWith(caption: new TextStyle(color: Colors.greenAccent))),
         child: new BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
           currentIndex: 0,
