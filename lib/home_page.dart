@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ucek_food_delivery/menu.dart';
 import 'package:ucek_food_delivery/ucek_appbar.dart';
 import 'package:ucek_food_delivery/category_list.dart';
 
@@ -21,6 +22,7 @@ class _HomePageState extends State<HomePage> {
               'Popular Dishes',
               style: TextStyle(color: Colors.white70, fontSize: 20),
             ),
+            //MenuList(1),
           ],
         ),
       ),
