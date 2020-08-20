@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/painting.dart';
 import 'package:ucek_food_delivery/menu.dart';
 
 class CategoryList extends StatefulWidget {
@@ -9,76 +8,84 @@ class CategoryList extends StatefulWidget {
 
 class _CategoryListState extends State<CategoryList> {
 
-  int infocus;
-  int flag;
+  int infocus = 0;
   @override
   Widget build(BuildContext context) {
-    List<String> categoryList = ['Indian', 'Chinese', 'American', 'Kerala', 'Italian'];
-    List<String> URList=['images/indian.png', 'images/chinese.png', 'images/american.png', 'images/kerala.png', 'images/italian.png'];
+
+    List<String> categoryList = [
+      'Indian',
+      'Chinese',
+      'American',
+      'Kerala',
+      'Italian',
+    ];
+
+    List<String> URList=[
+      'images/indian.png',
+      'images/chinese.png',
+      'images/american.png',
+      'images/kerala.png',
+      'images/italian.png'
+    ];
 
     return Column(
-      children: <Widget>[
-        Container(
-          height: 210,
-          child: ListView.builder(
-            scrollDirection: Axis.horizontal,
-            itemCount: categoryList.length,
-            itemBuilder: (context, index) {
-              return Padding(
-                padding: const EdgeInsets.all(10),
-                child: InkWell(
-                  onTap: (){
-                    setState(() {
-                      infocus = index;
-                    });
-                  },
-                  child: SizedBox(
-                    height: 200,
-                    width: 100,
-                    child:DecoratedBox(
-                      decoration: BoxDecoration(
-                        border: Border.all(
-                          color: Colors.white12) ,
-                          borderRadius: BorderRadius.circular(30),
-                          color: (infocus==index) ? const Color(0xFF00EA91) : Colors.transparent),
+      children: [
+      Container(
+      height: 150,
+      child: ListView.builder(
+          scrollDirection: Axis.horizontal,
+          itemCount: categoryList.length,
+          itemBuilder: (context, index) {
+            return Padding(
+              padding: const EdgeInsets.all(10),
+              child: InkWell(
+                onTap: (){
+                  setState(() {
+                    infocus = index;
+                  });
+                },
+                child: SizedBox(
+                  height: 160,
+                  width: 80,
+                  child:DecoratedBox(
+                      decoration: BoxDecoration(border: Border.all(color: Colors.white12) ,borderRadius: BorderRadius.circular(25), color: (infocus==index) ? Color(0xff33ff77) : Colors.transparent),
                       child: Column(
                         children: [
+
 //====================================IMAGE START====================================================
                           Padding(
-                            padding: const EdgeInsets.only(top: 15, left: 10, right: 10),
+                            padding: const EdgeInsets.only(top: 10, left: 10, right: 10),
                             child: ClipRRect(
-                              borderRadius: BorderRadius.circular(15),
+                              borderRadius: BorderRadius.circular(20),
                               child: Container(
-                                height: 85,
-                                width: 75,
-                                child: Image.asset(URList[index],
-                                  fit:BoxFit.cover),
+                                height: 60,
+                                width: 60,
+                                child: Image.asset(URList[index], fit:BoxFit.cover),
                               ),
                             ),
                           ),
 //=====================================TEXT START====================================================
                           Padding(
-                            padding: const EdgeInsets.only(top: 5),
+                            padding: const EdgeInsets.only(top: 13),
                             child: Text(
                                 categoryList[index],
-                                style: TextStyle(color: ((infocus==index) ? Colors.black : Colors.white), fontWeight: FontWeight.bold, fontSize: 18)
+                                style: TextStyle(color: ((infocus==index) ? Colors.black : Colors.white), fontWeight: FontWeight.bold, fontSize: 13)
                             ),
                           ),
                           Padding(
                             padding: const EdgeInsets.only(top: 2),
                             child: Text(
                                 'Foods',
-                                style: TextStyle(color: ((infocus==index) ? Colors.black : Colors.white), fontSize: 16)
+                                style: TextStyle(color: ((infocus==index) ? Colors.black : Colors.white), fontSize: 13)
                             ),
                           )
                         ],
                       )
-                    ),
                   ),
                 ),
-              );
-            }
-          ),
+              ),
+            );
+          }),
         ),
         SizedBox(height: 20,),
         Row(

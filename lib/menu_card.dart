@@ -49,7 +49,7 @@ class ItemCard extends StatelessWidget {
               Container(
                 alignment: Alignment.centerLeft,
                 width: 185,
-                padding: EdgeInsets.only(left: 5, top: 15, right: 5),
+                padding: EdgeInsets.only(left: 5, top: 15),
                 child: Column(
                   children: <Widget>[
                     Marquee(

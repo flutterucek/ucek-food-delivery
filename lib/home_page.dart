@@ -11,27 +11,22 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF101417),
+      backgroundColor: Colors.black,
       body: Container(
         child: Column(
           children: <Widget>[
-            CustomAppBar(),
-            SizedBox(height: 20,),
+            UcekAppBar(),
             CategoryList(),
           ],
         ),
       ),
       bottomNavigationBar:  new Theme(
         data: Theme.of(context).copyWith(
-          // sets the background color of the `BottomNavigationBar`
-            canvasColor: const Color(0xFF101417),
-            //I tried removing the "title" elements from the BottomNavigationBar items. But it throws some weird error
-            //Anyway, since this works, just finalised with it
-            //Would reduce file size if we could get rid of this though
+            canvasColor: Colors.black,
             textTheme: Theme
                 .of(context)
                 .textTheme
-                .copyWith(caption: new TextStyle(color: Colors.greenAccent))), // sets the inactive color of the `BottomNavigationBar`
+                .copyWith(caption: new TextStyle(color: Colors.greenAccent))),
         child: new BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
           currentIndex: 0,
@@ -49,7 +44,7 @@ class _HomePageState extends State<HomePage> {
               title: new Text("Contact"),
             )
           ],
-          selectedItemColor: const Color(0xFF00EA91),
+          selectedItemColor: Color(0xff33ff77),
           unselectedItemColor: Colors.grey[800],
           showSelectedLabels: false,
           showUnselectedLabels: false,
