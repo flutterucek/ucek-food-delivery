@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:ucek_food_delivery/temp_category_card.dart';
+import 'package:ucek_food_delivery/menu.dart';
+import 'package:ucek_food_delivery/menu_card.dart';
 import 'package:ucek_food_delivery/ucek_appbar.dart';
-import 'package:ucek_food_delivery/category_list.dart';
+import 'package:ucek_food_delivery/temp_category_list.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -13,7 +16,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: const Color(0xFF101417),
       body: Container(
         child: Column(
           children: <Widget>[
@@ -38,6 +41,9 @@ class _HomePageState extends State<HomePage> {
               style: TextStyle(color: Colors.white70, fontSize: 20),
             ),
             CategoryList(),
+            //CategoryCard('images/kerala.png', 'Kerala Foods'),
+            //ItemCard('images/1.jpeg','Data','hahahahhsadsajdhksdchjdscc','1h 12m','180.00'),
+            MenuList(5),
 //            Container(
 //              height: 120,
 //              child: ListView.builder(
@@ -59,11 +65,13 @@ class _HomePageState extends State<HomePage> {
       bottomNavigationBar:  new Theme(
         data: Theme.of(context).copyWith(
           // sets the background color of the `BottomNavigationBar`
-            canvasColor: Colors.black,
-            textTheme: Theme
-                .of(context)
-                .textTheme
-                .copyWith(caption: new TextStyle(color: Colors.green))), // sets the inactive color of the `BottomNavigationBar`
+          canvasColor: const Color(0xFF101417),
+          textTheme: Theme.of(context).textTheme.copyWith(
+            caption: new TextStyle(
+              color: Colors.green,
+            ),
+          ),
+        ), // sets the inactive color of the `BottomNavigationBar`
         child: new BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
           currentIndex: 0,
@@ -89,24 +97,4 @@ class _HomePageState extends State<HomePage> {
       ),
     );
   }
-}
-
-class ProductCardClipper extends CustomClipper<Path> {
-
-  @override
-  Path getClip(Size size) {
-    print(size.height);
-    Path path = Path();
-    path..moveTo(0,size.height/2 - 20)
-    ..lineTo(0, size.height/2 +20)
-    ..lineTo(size.width,40)
-    ..lineTo(size.width, 0)
-    ..lineTo(size.width - 40, 0)
-    ..lineTo(0, size.height/2 - 20);
-
-    return path;
-  }
-
-  @override
-  bool shouldReclip(CustomClipper<Path> oldClipper) => false;
 }
