@@ -17,10 +17,6 @@ class _HomePageState extends State<HomePage> {
           children: <Widget>[
             UcekAppBar(),
             CategoryList(),
-            Text(
-              'Popular Dishes',
-              style: TextStyle(color: Colors.white70, fontSize: 20),
-            ),
           ],
         ),
       ),
@@ -52,7 +48,7 @@ class _HomePageState extends State<HomePage> {
               title: new Text("Contact"),
             )
           ],
-          selectedItemColor: Colors.greenAccent,
+          selectedItemColor: Color(0xff33ff77),
           unselectedItemColor: Colors.grey[800],
           showSelectedLabels: false,
           showUnselectedLabels: false,

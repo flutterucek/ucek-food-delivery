@@ -18,7 +18,7 @@ class UcekAppBar extends StatelessWidget {
                   height: 60,
                   width: 60,
                   child:DecoratedBox(
-                    decoration: BoxDecoration(color: Color(0xff404040)),
+                    decoration: BoxDecoration(color: Colors.white12),
                     child: Icon(
                       Icons.list,
                       color: Colors.grey,
@@ -38,7 +38,7 @@ class UcekAppBar extends StatelessWidget {
                   height: 60,
                   width: 60,
                   child:DecoratedBox(
-                    decoration: BoxDecoration(color: Color(0xff404040)),
+                    decoration: BoxDecoration(color: Colors.white12),
                     child: Icon(
                       Icons.search,
                       color: Colors.grey,
