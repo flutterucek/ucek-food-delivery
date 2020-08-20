@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:marquee/marquee.dart';
 
 // ignore: must_be_immutable
 class ItemCard extends StatelessWidget {

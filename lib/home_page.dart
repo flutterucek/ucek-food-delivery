@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ucek_food_delivery/menu.dart';
-import 'package:ucek_food_delivery/ucek_appbar.dart';
+import 'package:ucek_food_delivery/custom_appbar.dart';
 import 'package:ucek_food_delivery/category_list.dart';
 
 class HomePage extends StatefulWidget {
@@ -12,24 +11,20 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: const Color(0xFF101417),
       body: Container(
         child: Column(
           children: <Widget>[
-            UcekAppBar(),
+            CustomAppBar(),
+            SizedBox(height: 20,),
             CategoryList(),
-            Text(
-              'Popular Dishes',
-              style: TextStyle(color: Colors.white70, fontSize: 20),
-            ),
-            //MenuList(1),
           ],
         ),
       ),
       bottomNavigationBar:  new Theme(
         data: Theme.of(context).copyWith(
           // sets the background color of the `BottomNavigationBar`
-            canvasColor: Colors.black,
+            canvasColor: const Color(0xFF101417),
             //I tried removing the "title" elements from the BottomNavigationBar items. But it throws some weird error
             //Anyway, since this works, just finalised with it
             //Would reduce file size if we could get rid of this though

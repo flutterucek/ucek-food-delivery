@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class UcekAppBar extends StatelessWidget {
+class CustomAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -9,7 +9,7 @@ class UcekAppBar extends StatelessWidget {
       child:Row(
         children: <Widget> [
           Padding(
-            padding: const EdgeInsets.only(left: 25),
+            padding: const EdgeInsets.only(left: 10),
             child:ClipRRect(
               borderRadius: BorderRadius.circular(20),
               child: InkWell(
@@ -29,7 +29,7 @@ class UcekAppBar extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: EdgeInsets.only(left: MediaQuery.of(context).size.width-170),
+            padding: EdgeInsets.only(left: MediaQuery.of(context).size.width-140),
             child:ClipRRect(
               borderRadius: BorderRadius.circular(20),
               child: InkWell(
