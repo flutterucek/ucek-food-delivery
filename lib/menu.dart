@@ -17,15 +17,15 @@ class MenuList extends StatelessWidget {
     List<String> temp =List();
     List<String> product= List();
     switch(n){
-      case 1: temp= Indian;
+      case 0: temp= Indian;
         break;
-      case 2: temp= Chineese;
+      case 1: temp= Chineese;
         break;
-      case 3: temp= American;
+      case 2: temp= American;
         break;
-      case 4: temp= Kerala;
+      case 3: temp= Kerala;
         break;
-      case 5: temp= Italian;
+      case 4: temp= Italian;
         break;
       default: temp= Indian;
     }

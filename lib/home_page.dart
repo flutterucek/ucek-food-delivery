@@ -49,7 +49,7 @@ class _HomePageState extends State<HomePage> {
               title: new Text("Contact"),
             )
           ],
-          selectedItemColor: Colors.greenAccent,
+          selectedItemColor: Colors.lightGreenAccent,
           unselectedItemColor: Colors.grey[800],
           showSelectedLabels: false,
           showUnselectedLabels: false,

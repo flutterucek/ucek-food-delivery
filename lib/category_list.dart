@@ -30,18 +30,6 @@ class _CategoryListState extends State<CategoryList> {
                   onTap: (){
                     setState(() {
                       infocus = index;
-                      switch(index){
-                        case 0: flag= 1;
-                          break;
-                        case 1: flag= 2;
-                          break;
-                        case 2: flag= 3;
-                          break;
-                        case 3: flag= 4;
-                          break;
-                        case 4: flag= 5;
-                          break;
-                      }
                     });
                   },
                   child: SizedBox(
@@ -52,7 +40,7 @@ class _CategoryListState extends State<CategoryList> {
                         border: Border.all(
                           color: Colors.white12) ,
                           borderRadius: BorderRadius.circular(30),
-                          color: (infocus==index) ? Colors.greenAccent : Colors.transparent),
+                          color: (infocus==index) ? Colors.lightGreenAccent : Colors.transparent),
                       child: Column(
                         children: [
 //====================================IMAGE START====================================================
@@ -113,7 +101,7 @@ class _CategoryListState extends State<CategoryList> {
         SizedBox(height: 20,),
         Container(
           height: 260,
-          child: MenuList(flag),
+          child: MenuList(infocus),
         )
       ],
     );
