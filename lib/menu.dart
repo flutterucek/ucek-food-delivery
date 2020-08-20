@@ -47,7 +47,7 @@ class MenuList extends StatelessWidget {
               break;
             case 'Hot and Sour Soup': product= ['images/hot_and_sour_soup.png', 'Hot & Sour Soup', 'Soup with a spicy and sour broth.', '31m', '138.00'];
               break;
-            case 'Szechwan Chilli Chicken': product= ['images/szechwan_chilli_chicken.png', 'Szechwan Chilli Chicken', 'Fiery delight straight from China.', '37m', '230.00'];
+            case 'Szechwan Chilli Chicken': product= ['images/szechwan_chilli_chicken.png', 'Szechwan Chilli Chicken', 'A Fiery delight straight from China.', '37m', '230.00'];
               break;
             case 'Spring Rolls': product= ['images/spring_rolls.png', 'Spring Rolls', 'Crisp appetizer where shredded veggies.','28m', '36.00'];
               break;
