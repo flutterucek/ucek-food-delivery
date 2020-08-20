@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:marquee_widget/marquee_widget.dart';
 
 // ignore: must_be_immutable
 class ItemCard extends StatelessWidget {
@@ -49,12 +50,19 @@ class ItemCard extends StatelessWidget {
                 alignment: Alignment.centerLeft,
                 width: 185,
                 padding: EdgeInsets.only(left: 5, top: 15),
-                child: Text(name,
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
-                  ),
+                child: Column(
+                  children: <Widget>[
+                    Marquee(
+                      child: Text(name,
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        ),
+                      ),
+                      pauseDuration: Duration(milliseconds: 2500),
+                    ),
+                  ],
                 ),
               ),
               Container(

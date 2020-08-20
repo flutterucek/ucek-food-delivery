@@ -39,7 +39,7 @@ class MenuList extends StatelessWidget {
           switch(item){
             case 'Vegetable Biryani': product= ['images/veg_biriyani.png', 'Vegetable Biryani', 'Vegetable biryani is an aromatic rice dish.', '31m', '185.00'];
               break;
-            case 'Paneer Masala': product= ['images/paneer_butter_masala.png', 'Paneer Masala', 'Marinated paneer cheese served in a spiced gravy.', '36m', '169.00'];
+            case 'Paneer Masala': product= ['images/paneer_butter_masala.png', 'Paneer Butter Masala', 'Marinated paneer cheese served in a spiced gravy.', '36m', '169.00'];
               break;
             case 'Carrot Halwa': product= ['images/carrot_halwa.png', 'Carrot Halwa', 'Indian pudding made with fresh carrots.', '30m', '82.00'];
               break;
@@ -47,11 +47,11 @@ class MenuList extends StatelessWidget {
               break;
             case 'Hot and Sour Soup': product= ['images/hot_and_sour_soup.png', 'Hot & Sour Soup', 'Soup with a spicy and sour broth.', '31m', '138.00'];
               break;
-            case 'Szechwan Chilli Chicken': product= ['images/szechwan_chilli_chicken.png', 'Chilli Chicken', 'Fiery delight straight from China.', '37m', '230.00'];
+            case 'Szechwan Chilli Chicken': product= ['images/szechwan_chilli_chicken.png', 'Szechwan Chilli Chicken', 'Fiery delight straight from China.', '37m', '230.00'];
               break;
             case 'Spring Rolls': product= ['images/spring_rolls.png', 'Spring Rolls', 'Crisp appetizer where shredded veggies.','28m', '36.00'];
               break;
-            case 'Chocolate Chip Cookies': product= ['images/cookies.png', 'Chocolate Cookies', 'Drop cookie that originated in the US.', '28m', '89.00'];
+            case 'Chocolate Chip Cookies': product= ['images/cookies.png', 'Chocolate Chip Cookies', 'Drop cookie that originated in the US.', '28m', '89.00'];
               break;
             case 'Cronut': product= ['images/cronut.png', 'Cronut', 'Cronut is a doughnut pastry invented by NYC.', '21m', '56.00'];
               break;
