@@ -40,7 +40,7 @@ class _CategoryListState extends State<CategoryList> {
                         border: Border.all(
                           color: Colors.white12) ,
                           borderRadius: BorderRadius.circular(30),
-                          color: (infocus==index) ? Colors.lightGreenAccent : Colors.transparent),
+                          color: (infocus==index) ? const Color(0xFF00EA91) : Colors.transparent),
                       child: Column(
                         children: [
 //====================================IMAGE START====================================================
