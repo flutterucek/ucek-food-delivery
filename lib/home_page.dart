@@ -11,18 +11,23 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: const Color(0xFF101417),
       body: Container(
         child: Column(
           children: <Widget>[
             UcekAppBar(),
-            CategoryList(),
-          ],
+            SizedBox(
+              height: 20,
+            ),
+            Padding(padding: const EdgeInsets.only(right: 10),
+              child: CategoryList(),
+            )
+            ],
         ),
       ),
       bottomNavigationBar:  new Theme(
         data: Theme.of(context).copyWith(
-            canvasColor: Colors.black,
+            canvasColor: const Color(0xFF101417),
             textTheme: Theme
                 .of(context)
                 .textTheme

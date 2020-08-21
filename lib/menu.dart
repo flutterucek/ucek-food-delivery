@@ -30,7 +30,7 @@ class MenuList extends StatelessWidget {
       default: temp= Indian;
     }
     return Container(
-      height: 260,
+      height: 300,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         itemCount: temp.length,
@@ -74,7 +74,7 @@ class MenuList extends StatelessWidget {
           }
          return Container(
            padding: EdgeInsets.all(10.0),
-           height: 250,
+           height: 300,
            width: 200,
            child: ItemCard(product[0], product[1], product[2], product[3], product[4])
          );

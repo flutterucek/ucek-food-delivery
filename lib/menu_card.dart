@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:marquee_widget/marquee_widget.dart';
+import 'package:ucek_food_delivery/product_page.dart';
 
 // ignore: must_be_immutable
 class ItemCard extends StatelessWidget {
@@ -15,128 +16,135 @@ class ItemCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: <Widget>[
-        ClipPath(
-          clipper: CardClipper(),
-          child:Container(
-            height: 250,
-            width: 200,
-            decoration: BoxDecoration(
-              color: Colors.white10,
-              borderRadius: BorderRadius.circular(20),
+    return GestureDetector(
+      onTap: (){
+        Navigator.push(
+          context, new MaterialPageRoute(
+          builder: (context) => new ProductPage(img, name, content, time, amount)));
+      },
+      child: Stack(
+        children: <Widget>[
+          ClipPath(
+            clipper: CardClipper(),
+            child:Container(
+              height: 300,
+              width: 200,
+              decoration: BoxDecoration(
+                color: const Color(0xFF1E2326),
+                borderRadius: BorderRadius.circular(20),
+              ),
             ),
           ),
-        ),
-        Container(
-          height: 250,
-          width: 200,
-          child:  Column(
-            children: <Widget>[
-              Padding(padding: const EdgeInsets.only(top: 15)),
-              Container(
-                alignment: Alignment.center,
-                height: 105,
-                width: 110,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  image: DecorationImage(
-                    image: AssetImage(img),
-                    fit: BoxFit.fill,
-                  )
-                ),
-              ),
-              Container(
-                alignment: Alignment.centerLeft,
-                width: 185,
-                padding: EdgeInsets.only(left: 5, top: 15),
-                child: Column(
-                  children: <Widget>[
-                    Marquee(
-                      child: Text(name,
-                        style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white,
-                        ),
-                      ),
-                      pauseDuration: Duration(milliseconds: 2500),
-                    ),
-                  ],
-                ),
-              ),
-              Container(
-                padding: EdgeInsets.only(left: 5, top: 10),
-                alignment: Alignment.centerLeft,
-                width: 185,
-                child: Text(content,
-                  style: TextStyle(
-                    fontSize: 14,
-                    fontWeight: FontWeight.normal,
-                    color: Colors.white60,
+          Container(
+            height: 300,
+            width: 200,
+            child:  Column(
+              children: <Widget>[
+                Padding(padding: const EdgeInsets.only(top: 15)),
+                Container(
+                  alignment: Alignment.center,
+                  height: 105,
+                  width: 110,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    image: DecorationImage(
+                      image: AssetImage(img),
+                      fit: BoxFit.fill,
+                    )
                   ),
                 ),
-              ),
-              Padding(padding: const EdgeInsets.only(top: 10)),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: <Widget>[
-                  Container(
-                    width: 75,
-                    height: 25,
-                    child: Row(
-                      children: <Widget>[
-                        Icon(Icons.timer,
-                          color: Colors.white60,
-                          size: 15,
-                        ),
-                        Padding(padding: const EdgeInsets.only(left: 1)),
-                        Text(time,
+                Container(
+                  alignment: Alignment.centerLeft,
+                  width: 185,
+                  padding: EdgeInsets.only(left: 5, top: 15, right: 5),
+                  child: Column(
+                    children: <Widget>[
+                      Marquee(
+                        child: Text(name,
                           style: TextStyle(
-                          color: Colors.white60,
-                          fontSize: 15,
-                          fontWeight: FontWeight.bold,
-                        ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  Container(
-                    width: 75,
-                    height: 25,
-                    child: Row(
-                      children: <Widget>[
-                        Container(
-                          width: 10,
-                          height: 75,
-                          padding: EdgeInsets.only(top: 5),
-                          child: Image.asset('images/rupee.png',
-                            width: 30,
-                            height: 30,
-                            alignment: Alignment.topLeft,
-                            color: Colors.redAccent,
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
                           ),
                         ),
-                        Container(
-                          width: 65,
-                          height: 75,
-                          child: Text(amount,
+                        pauseDuration: Duration(milliseconds: 2500),
+                      ),
+                    ],
+                  ),
+                ),
+                Container(
+                  padding: EdgeInsets.only(left: 5, top: 10),
+                  alignment: Alignment.centerLeft,
+                  width: 185,
+                  child: Text(content,
+                    style: TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.normal,
+                      color: Colors.white60,
+                    ),
+                  ),
+                ),
+                Padding(padding: const EdgeInsets.only(top: 10)),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: <Widget>[
+                    Container(
+                      width: 75,
+                      height: 25,
+                      child: Row(
+                        children: <Widget>[
+                          Icon(Icons.timer,
+                            color: Colors.white60,
+                            size: 15,
+                          ),
+                          Padding(padding: const EdgeInsets.only(left: 1)),
+                          Text(time,
                             style: TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold,
+                            color: Colors.white60,
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold,
+                          ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Container(
+                      width: 75,
+                      height: 25,
+                      child: Row(
+                        children: <Widget>[
+                          Container(
+                            width: 10,
+                            height: 75,
+                            padding: EdgeInsets.only(top: 5),
+                            child: Image.asset('images/rupee.png',
+                              width: 30,
+                              height: 30,
+                              alignment: Alignment.topLeft,
                               color: Colors.redAccent,
                             ),
                           ),
-                        ),
-                      ],
-                    ),
-                  )
-                ],
-              ),
-            ],
+                          Container(
+                            width: 65,
+                            height: 75,
+                            child: Text(amount,
+                              style: TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.redAccent,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    )
+                  ],
+                ),
+              ],
+            ),
           ),
-        ),
-      ]
+        ]
+      )
     );
   }
 }
