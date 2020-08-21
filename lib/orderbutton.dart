@@ -15,7 +15,9 @@ class _OrderButtonState extends State<OrderButton> {
           InkWell(
             onTap: (){
               setState(() {
-                number = number+1;
+                if(number<=8) {
+                  number++;
+                }
               });
             },
             child:ClipRRect(
@@ -42,7 +44,9 @@ class _OrderButtonState extends State<OrderButton> {
             child:InkWell(
               onTap: (){
                 setState(() {
-                  number = number-1;
+                  if(number>0) {
+                    number--;
+                  }
                 });
               },
               child:ClipRRect(

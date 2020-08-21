@@ -82,7 +82,8 @@ class ProductPage extends StatelessWidget {
                                     ),
                                     Text(amount,
                                       style: TextStyle(fontSize: 20,
-                                          color: Colors.redAccent
+                                        color: Colors.redAccent,
+                                        fontWeight: FontWeight.bold
                                       ),
                                      ),
                                   ],
@@ -99,7 +100,10 @@ class ProductPage extends StatelessWidget {
                                 children: [
                                   Text(getContent(name),
                                     textAlign: TextAlign.left,
-                                    style: TextStyle(fontSize: 15, color: Colors.white70),
+                                    style: TextStyle(fontSize: 15,
+                                      color: Colors.white70,
+                                      fontWeight: FontWeight.bold,
+                                    ),
                                   ),
                                 ],
                               ),

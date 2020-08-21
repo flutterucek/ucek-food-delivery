@@ -69,14 +69,14 @@ class _CategoryListState extends State<CategoryList> {
                             padding: const EdgeInsets.only(top: 13),
                             child: Text(
                                 categoryList[index],
-                                style: TextStyle(color: ((infocus==index) ? Colors.black : Colors.white), fontWeight: FontWeight.bold, fontSize: 13)
+                                style: TextStyle(color: ((infocus==index) ? Colors.black : Colors.white), fontWeight: FontWeight.bold, fontSize: 15)
                             ),
                           ),
                           Padding(
                             padding: const EdgeInsets.only(top: 2),
                             child: Text(
                                 'Foods',
-                                style: TextStyle(color: ((infocus==index) ? Colors.black : Colors.white), fontSize: 13)
+                                style: TextStyle(color: ((infocus==index) ? Colors.black : Colors.white), fontSize: 13, fontWeight: FontWeight.normal)
                             ),
                           )
                         ],

@@ -24,10 +24,9 @@ class Order extends StatelessWidget {
                     height: length,
                     color: Colors.black,
                     child: OrderButton(),
-//=======================Have to add no. of purchases===========================
-                        )
-                    ),
-                  ),
+                  )
+                ),
+              ),
               Container(
                 height: length,
                 width: wide,
