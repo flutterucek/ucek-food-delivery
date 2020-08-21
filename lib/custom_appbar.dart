@@ -21,7 +21,7 @@ class CustomAppBar extends StatelessWidget {
             padding: EdgeInsets.only(right: 10),
             child:InkWell(
               onTap: (){print("Search button was clicked");},
-              child: NavButton(Icons.search),
+              child: NavButton(Icons.search,),
             )
           )
         ],

@@ -107,7 +107,9 @@ class ProductPage extends StatelessWidget {
                                   ),
                                 ],
                               ),
+                              directionMarguee: DirectionMarguee.oneDirection,
                               direction: Axis.vertical,
+                              pauseDuration: Duration(milliseconds: 750),
                             )
                         ),//For Contents or discription
                         Container(
