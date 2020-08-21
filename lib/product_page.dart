@@ -118,8 +118,7 @@ class ProductPage extends StatelessWidget {
                             ),
                           ),
                         ),//For Choose Text
-                        OptionList(name),//For Option
-                        Order(),//For Order
+                        OptionList(name)//For Optionr
                       ],
                     ),
                   ),
@@ -128,6 +127,7 @@ class ProductPage extends StatelessWidget {
             )
         ),
       ),
+      bottomNavigationBar: Order(),
     );
   }
 }

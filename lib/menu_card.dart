@@ -41,16 +41,19 @@ class ItemCard extends StatelessWidget {
             child:  Column(
               children: <Widget>[
                 Padding(padding: const EdgeInsets.only(top: 15)),
-                Container(
-                  alignment: Alignment.center,
-                  height: 105,
-                  width: 110,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    image: DecorationImage(
-                      image: AssetImage(img),
-                      fit: BoxFit.fill,
-                    )
+                Hero(
+                  tag: name,
+                  child: Container(
+                    alignment: Alignment.center,
+                    height: 105,
+                    width: 110,
+                    decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        image: DecorationImage(
+                          image: AssetImage(img),
+                          fit: BoxFit.fill,
+                        )
+                    ),
                   ),
                 ),
                 Container(

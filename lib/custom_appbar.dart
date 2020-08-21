@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:ucek_food_delivery/nav_button.dart';
 
-class UcekAppBar extends StatelessWidget {
+class CustomAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(

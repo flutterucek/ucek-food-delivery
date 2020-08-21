@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ucek_food_delivery/orderbutton.dart';
 
 class Order extends StatelessWidget {
   double length= 60;
@@ -7,6 +8,7 @@ class Order extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      color: const Color(0xFF101417),
       child: Padding(
         padding: const EdgeInsets.all(15.0),
         child: Row(
@@ -20,7 +22,8 @@ class Order extends StatelessWidget {
                   child: Container(
                     width: wide,
                     height: length,
-                    color: Colors.grey,
+                    color: Colors.black,
+                    child: OrderButton(),
 //=======================Have to add no. of purchases===========================
                         )
                     ),

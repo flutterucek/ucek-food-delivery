@@ -15,7 +15,7 @@ class _HomePageState extends State<HomePage> {
       body: Container(
         child: Column(
           children: <Widget>[
-            UcekAppBar(),
+            CustomAppBar(),
             SizedBox(
               height: 20,
             ),
